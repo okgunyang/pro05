@@ -1,0 +1,13 @@
+# 서블릿, 서버, 구동시 설정할 내용
+server :
+  port : 8094
+
+# mysql8 설정
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop?serverTimezone=Asia/Seoul
+    username: root
+    password: a1234 
+
+
