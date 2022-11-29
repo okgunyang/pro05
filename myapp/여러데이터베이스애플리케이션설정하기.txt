@@ -1,0 +1,62 @@
+# DB 설정 - application.properties
+## MySql
+spring.datasource.url=jdbc:mysql://localhost:3306/shop?serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=a1234
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+## mariaDB
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+spring.datasource.url=jdbc:mariadb://localhost:3308/shop
+spring.datasource.username=root
+spring.datasource.password=1234
+
+## 오라클 DB
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=system
+spring.datasource.password=1234
+
+## Postgre DB
+spring.datasource.url=jdbc:postgresql://localhost:5432/springboot
+spring.datasource.username=root
+spring.datasource.password=1234
+
+
+
+# DB 설정 - application.yml
+## MySQL 
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shop?serverTimezone=Asia/Seoul
+    username: root
+    password: a1234
+
+
+## mariaDB
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3308/shop?serverTimezone=UTC
+    username: root
+    password: 1234
+
+
+## 오라클 DB
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: 1234
+
+
+## Postgre DB
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/shop
+    platform: postgres
+    username: root
+    password: 1234
