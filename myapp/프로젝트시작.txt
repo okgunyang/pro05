@@ -1,0 +1,72 @@
+1. sts4 다운로드
+https://spring.io/tools 에서 [4.16.1 - WINDOWS X86_64] 항목을 클릭하여 
+spring-tool-suite-4-4.16.1.RELEASE-e4.25.0-win32.win32.x86_64.self-extracting.jar 를 다운로드
+
+2. sts4 실행 
+다운로드 받은 spring-tool-suite-4-4.16.1.RELEASE-e4.25.0-win32.win32.x86_64.self-extracting.jar 를 복사하여 sts4.jar로 파일 이름 변경 후 압축해제
+
+sts4 폴더 안에 있는 contents.zip 파일을 압축 해제
+
+contents 폴더 안에 있는 sts-4.16.1.RELEASE 폴더로 이동
+
+SpringToolSuite4.exe 를 관리자 모드로 실행
+
+3. Lombok 설치
+진행 중인 sts4를 닫고, sts-4.16.1.RELEASE 폴더 안에 lombok.jar 를 복사하여 붙여 넣기하고,
+
+Window  탐색기의 url 입력 줄에 cmd  . 을 입력하여 터미널을 열고, 
+
+java -jar lombok.jar 명령을 입력하여 현재 설치된 sts4 안의 sts-4.16.1.RELEASE 폴더 내부의 
+
+SpringToolSuite4.exe를 지정하여 실행 가능한 에디터로 지정하여 설치
+
+
+4. sts4의 개발 환경 진행(에디터 설정)
+[Window]-[Preferences]
+	[General]-[Workspace] 
+		[Text file encoding] : UTF-8
+
+	[Java]
+		[Compiler] - [JDK Compilance] : 1.8
+		[Install JREs] : sts의 것을 그대로 사용하거나 jdk 1.8 이상
+
+	
+
+5. sts4 프로젝트 시작
+[File]-[New]-[Spring Stater Project]
+	Name : myapp
+	Type : Gradle[Groovy]/Maven
+	Java Version : 8
+	Group : com.shop
+	Package : com.shop.myapp
+	------------------------------
+	Spring Boot Version: 2.7.6
+	Available:
+		Spring Boot DevTools
+		Lombok
+		Thtmeleaf
+		Spring Web
+
+6. 기본 환경 설정
+(gradle) myapp/build.gradle : 프로젝트의 언어와 개발도구 및 의존성 라이브러리 추가
+(maven) myapp/pom.xml : 프로젝트의 언어와 개발도구 및 의존성 라이브러리 추가
+myapp/src/main/resources/application.properties : 웹 및 데이터베이스와 웹에서 사용가능한 자원 설정
+	server.port = 8095
+myapp/sec/main/resources/templates/index.html 파일 작성
+
+7. 서버 테스팅
+	[Boot Dashboard]에서 local 항목의 myapp을 [(Re)start] 로 기동
+	웹 브라우저에서 localhost:8095
+
+
+
+
+
+
+
+
+ 
+
+
+
+
